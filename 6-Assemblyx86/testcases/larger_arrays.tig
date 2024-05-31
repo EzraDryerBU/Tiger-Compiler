@@ -1,0 +1,31 @@
+/*idea is to test performance of creating and iterating over progressively larger arrays*/
+let
+    type int_arr = array of int
+
+    function printint(i: int) =
+        let function f(i:int) = if i>0 
+                then (f(i/10); print(chr(i-i/10*10+ord("0"))))
+        in if i<0 then (print("-"); f(-i))
+            else if i>0 then f(i)
+            else print("0")
+        end
+
+    function sum(a: int_arr, len: int) : int =
+        let
+            var s := 0
+        in
+            for i := 0 to (len-1) do (
+                s := s + a[i]
+            ); s
+        end
+
+    var retsum := 0
+in
+    for i := 1 to 100 do (
+        let
+            var my_ints:int_arr := int_arr[i] of 1
+        in
+            retsum := retsum + sum(my_ints, i)
+        end
+    ); printint(retsum)
+end

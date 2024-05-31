@@ -1,0 +1,5 @@
+let
+    function dog(name:string) : string = name
+in
+print(dog("asdf"))
+end
