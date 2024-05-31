@@ -1,0 +1,17 @@
+/* this program finds the summation from 1 to 10.
+   It is a simple progam but actually useful so it is worth ensuring it parses
+   correctly */
+
+let
+    function sumUpTo(n: int) : int =
+        if n <= 0 then
+            0
+        else
+            n + sumUpTo(n - 1)
+in
+    let
+        var numberToSum := 10  
+    in
+        print("Sum of numbers from 1 to ", numberToSum, " is ", sumUpTo(numberToSum), "\n")
+    end
+end

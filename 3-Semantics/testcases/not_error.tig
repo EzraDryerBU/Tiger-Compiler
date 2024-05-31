@@ -1,0 +1,9 @@
+/*| TYPE |*/
+/* error: I create a type that has a field with the same name as a variable (which is valid). I then send that variable into STD not which takes an int and not a string resulting in a TYPE error. */
+let
+	type rec = {name:int, val:string}
+	var val := rec {name=10, val="mike"}
+	
+in
+	not(val.val)	
+end

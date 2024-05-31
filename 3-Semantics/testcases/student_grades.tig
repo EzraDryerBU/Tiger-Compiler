@@ -1,0 +1,21 @@
+/*| MISPLACED |*/
+/* increments a student's first grade until his total score is = 350. a break is placed outside a while loop */ 
+let
+    type nums = array of int
+    type student = {name: string, grades: nums}
+
+    function calc_total (student: student) : int = 
+        let
+            var sum := 0
+        in
+            ((for i := 0 to 4 do
+                sum := sum + student.grades[i]); sum)
+        end
+
+
+    var s:student := student {name = "Bobby", grades = nums [5] of 65}
+in
+    (while calc_total (s) < 350 do (
+        s.grades[0] := s.grades[0] + 1
+    ); break)
+end

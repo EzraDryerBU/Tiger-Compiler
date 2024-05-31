@@ -1,0 +1,14 @@
+function f (InFrame 0) InReg
+function isdigit (InFrame 0) InReg
+function merge (InFrame 0) InReg InReg
+function printint (InFrame 0) InReg
+function printlist (InFrame 0) InReg
+function readint (InFrame 0) InReg
+function readlist (InFrame 0)
+function skipto (InFrame 0)
+var any InReg
+var buffer (InFrame ~4)
+var i InReg
+var i InReg
+var list1 InReg
+var list2 InReg

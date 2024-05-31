@@ -1,0 +1,11 @@
+/*comparing nil values, illegal semantically but fine syntax-wise*/
+let
+    var a:int := nil
+    var b:int := nil
+    var c:string := "hello"
+    type any = {any: int}
+    var d:any := nil
+in
+    if a = b then (c = d);
+    if nil = nil then a := b
+end

@@ -1,0 +1,34 @@
+LetExp([
+ FunctionDec[
+  (sumUpTo,[
+   (n,true,int)],
+SOME(int),
+   IfExp(
+    OpExp(LeOp,
+     VarExp(
+      SimpleVar(n)),
+     IntExp(0)),
+    IntExp(0),
+    OpExp(PlusOp,
+     VarExp(
+      SimpleVar(n)),
+     CallExp(sumUpTo,[
+      OpExp(MinusOp,
+       VarExp(
+        SimpleVar(n)),
+       IntExp(1))]))))]],
+ SeqExp[
+  LetExp([
+   VarDec(numberToSum,true,NONE,
+    IntExp(10))],
+   SeqExp[
+    CallExp(print,[
+     StringExp("Sum of numbers from 1 to "),
+     VarExp(
+      SimpleVar(numberToSum)),
+     StringExp(" is "),
+     CallExp(sumUpTo,[
+      VarExp(
+       SimpleVar(numberToSum))]),
+     StringExp("
+")])])])

@@ -1,0 +1,7 @@
+/* testing for functions with multiple args */
+let
+	function foo(a:int, b:int, c:int, d:string):int=
+        ((a+b)+c; c+a; (c+b)+a;0)
+in
+	foo(1, 5, 7, "Hello")
+end

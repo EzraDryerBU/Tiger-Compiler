@@ -1,0 +1,35 @@
+LetExp([
+ VarDec(x,true,NONE,
+  IntExp(1)),
+ VarDec(y,true,NONE,
+  IntExp(2)),
+ VarDec(z,true,NONE,
+  IntExp(3))],
+ SeqExp[
+  IfExp(
+   OpExp(GtOp,
+    VarExp(
+     SimpleVar(y)),
+    VarExp(
+     SimpleVar(x))),
+   IfExp(
+    OpExp(GtOp,
+     VarExp(
+      SimpleVar(z)),
+     OpExp(PlusOp,
+      VarExp(
+       SimpleVar(y)),
+      VarExp(
+       SimpleVar(x)))),
+    IfExp(
+     OpExp(LtOp,
+      VarExp(
+       SimpleVar(x)),
+      OpExp(MinusOp,
+       VarExp(
+        SimpleVar(y)),
+       VarExp(
+        SimpleVar(z)))),
+     StringExp("all true"),
+     StringExp("last if false")),
+    StringExp("second if false")))])

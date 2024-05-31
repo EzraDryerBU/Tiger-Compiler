@@ -1,0 +1,2 @@
+Skeleton 5
+d5Cf7d"A"d"S"Cd"OS"d"Tr"d"Int"d"List"d"Temp"Cd"Tree"d"ListPair"d"Symbol"d"TextIO"d"Printtree"Cd"Parse"d"ErrorMsg"d"FindEscape"d"Interpret"d"Translate"Nad"T"gp1d"Types"ad"E"gp1d"Env"ad"Semant"è0ad"Main"ÿ‚?N

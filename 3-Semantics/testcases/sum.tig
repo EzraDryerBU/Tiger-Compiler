@@ -1,0 +1,19 @@
+/*| TYPE MISPLACED |*/
+/* this program finds the sum of numbers 1 to 10,
+    but there is a break in the base case that should cause a MISPLACED error.
+    The TYPE error happens because the if and else exp do not return the same type
+*/
+
+let
+    function sumUpTo(n: int) : int =
+        if n <= 0 then
+            break
+        else
+            n + sumUpTo(n - 1)
+in
+    let
+        var numberToSum := 10  
+    in
+        print("Summing numbers 1 to 10")
+    end
+end

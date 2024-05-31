@@ -1,0 +1,9 @@
+/*| SCOPE ERROR |*/
+/* record variable missing field and have undefined fields */
+let
+	type  rectype = {name:string, age:int}
+	var rec1:rectype := rectype { address = " "}
+in
+	rec1.name := "Somebody";
+	rec1
+end

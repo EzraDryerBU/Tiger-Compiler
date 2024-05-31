@@ -1,0 +1,3 @@
+function cat (InFrame 0) InReg
+function dog (InFrame 0) InReg
+function pig (InFrame 0) InReg

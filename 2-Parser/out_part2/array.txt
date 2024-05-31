@@ -1,0 +1,33 @@
+LetExp([
+ TypeDec[
+  (person,
+   RecordTy[
+    (name,true,string),
+    (age,true,int)])],
+ VarDec(people,true,NONE,
+  ArrayExp(person,
+   IntExp(10),
+   RecordExp(person,[
+
+    (name,
+     StringExp("placeholder")),
+    (age,
+     OpExp(MinusOp,
+      IntExp(0),
+      IntExp(1)))])))],
+ SeqExp[
+  AssignExp(
+   FieldVar(
+    SubscriptVar(
+     SimpleVar(people),
+     IntExp(0)),
+    name),
+   StringExp("First")),
+  OpExp(EqOp,
+   VarExp(
+    FieldVar(
+     SubscriptVar(
+      SimpleVar(people),
+      IntExp(1)),
+     age)),
+   IntExp(21))])

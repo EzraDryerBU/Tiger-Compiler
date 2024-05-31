@@ -1,0 +1,16 @@
+/* Nested-if statements on both levels return the same value on both the inner levels and the outer levels*/
+let
+function nestIfs(n: int, k : int) : int =
+	if n > 5 then 
+		if n < 100 then
+			0 + k
+		else 1 - k
+	else 
+		if n > 0 then
+			1 - k
+		else 
+			0 + k
+	
+in
+	nestIfs(10, 17)
+end

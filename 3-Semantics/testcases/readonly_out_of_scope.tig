@@ -1,0 +1,21 @@
+/*| READONLY SCOPE |*/
+/* does the following:
+    1. assigns to readonly variable (causes READONLY error)
+    2. multiple breaks in one loop (valid, no errors)
+    3. out-of-scope variables (causes SCOPE errors) */
+(while (1) do (break; break; break;
+    for i := 0 to 10 do (break; break;
+        let
+            var i : int := 0 /* different i, not read only */
+        in
+            i := 1
+        end;
+        i := 1 /* not assignable - error */
+    )
+);
+let
+    var a : a := "test" /* type a does not exist - error */
+    var b : int := fake_record{i=fake_type} /* fake_record does not exist - error */
+in
+    a
+end)

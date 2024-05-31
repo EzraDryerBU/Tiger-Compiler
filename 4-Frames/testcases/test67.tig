@@ -1,0 +1,8 @@
+let
+    var i := 0
+    var j := i
+    var k := j
+    function f () = j := 9
+in
+f(); j
+end

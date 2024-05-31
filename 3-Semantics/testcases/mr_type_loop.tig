@@ -1,0 +1,47 @@
+/*| LOOP TYPE |*/
+/*  Helped find the following bug:
+        mutually recursive types successfully caused
+        LOOP error, but would then cause infinite loop
+        when a new variable of that type was defined
+*/
+(let function f(x:int) : int = 1
+    function g(y:int) : int = 2
+    type betterint = int
+    type a = string
+    type b = c
+    type c = b
+    var cvar : c := "test string" /* previously caused infinite loop */
+in
+    let 
+        var a : betterint := 1
+    in
+        for i := a to 10 do f(i)
+    end
+end;
+let
+    type arrtype1 = array of int
+    type arrtype2 = array of int
+
+    var arr1: arrtype1 := arrtype2 [10] of 0
+in
+    arr1
+end;
+let type a = int
+    var a : a := 5
+    var b : a := 7
+in b + a
+end;
+let
+    function f(v: string) =
+        let
+            var v := "1"
+        in
+            print (v);
+            let var v := "2" in print(v) end;
+            print (v);
+            let var v := "3" in print(v) end;
+            print (v)
+        end
+in
+    f("0")
+end)

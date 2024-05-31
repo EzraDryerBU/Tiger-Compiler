@@ -1,0 +1,10 @@
+/* a lot of nested fields */
+let
+var x := 10
+
+in
+
+x { q=a{y=b{z=c{q= 0}}}};
+a.b.c.d.e.f.b[10]
+
+end

@@ -1,0 +1,10 @@
+/* this program tests mutually recursive definitions for records and functions
+ * and was a very helpful program for debugging */
+let var a := 5
+	function f() : int = g(a)
+	function g(i : int) = f()
+	type tree = {key : int, children : treelist}
+	type treelist = {head : tree, tail : treelist}
+in 
+	f()
+end

@@ -1,0 +1,6 @@
+/* This should actually be fine, as this is the only way to get a var of type unit*/
+let
+    var x := ()
+in
+ x
+end

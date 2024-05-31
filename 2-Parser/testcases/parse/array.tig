@@ -1,0 +1,9 @@
+/* PARSEABLE */
+/* tests array and record type creation, as well as array and record accessing */
+let
+    type person = {name: string, age: int}
+    var people := person[10] of person {name = "placeholder", age = -1}
+in
+    people[0].name := "First";
+    people[1].age = 21
+end

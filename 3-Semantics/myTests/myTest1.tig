@@ -1,0 +1,7 @@
+/*| LOOP |*/
+let
+    type a = b
+    type b = a
+in
+ ()
+end

@@ -1,0 +1,17 @@
+/* test all built-in functions */
+let
+    var a := 4
+    var b : string := ""
+    var c : int := 0
+in
+    print("fd");
+    flush();
+    b := getchar();
+    c := ord("f");
+    b := chr(3);
+    c := size("fd");
+    b := substring("abcdef", 1, 4);
+    b := concat("a", "b");
+    c := not(1);
+    exit(-1)
+end

@@ -1,0 +1,14 @@
+function f (InFrame 0) InReg
+function isdigit (InFrame 0) InReg
+function printint (InFrame 0) InReg
+function readint (InFrame 0) InReg
+function skipto (InFrame 0)
+function slow_product (InFrame 0) InReg InReg
+var any InReg
+var buffer (InFrame ~4)
+var i InReg
+var i InReg
+var m InReg
+var n InReg
+var r InReg
+var res InReg

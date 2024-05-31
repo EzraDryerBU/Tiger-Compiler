@@ -1,0 +1,10 @@
+/*|READONLY|*/
+/*checking to see that the base enviroemnt functions are their, but also that you can't assign to a loop*/
+
+let
+    var y := 5
+    var hi := "hello"
+in
+    (for i := 0 to y do
+        print(hi); flush(); getChar(); ord("Hi"); i := 10)
+end

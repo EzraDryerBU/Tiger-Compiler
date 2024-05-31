@@ -1,0 +1,2 @@
+function g (InFrame 0) InReg
+var a InReg

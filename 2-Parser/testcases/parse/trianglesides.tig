@@ -1,0 +1,9 @@
+/* parsable*/
+let
+    function trianglesides(a:int, b:int, c:int) : string =
+        if a = (b = c) then "equilateral"
+        else if a <> (b <> c) then "scalene"
+        else "isosceles"
+in
+    trianglesides(3,4,5)
+end

@@ -1,0 +1,2 @@
+Skeleton 5
+d2f4d"PrintAbsyn"ä¢LrParser"d"ErrorMsg"d"TextIO"ad"Parse"jh3aä¢TigerLrVals"jh1aä¢Token"gp2ÿÿgp1e"TigerLrValsFun"aä¢Lex"jh1aä¢Tokens"gp2ÿ=ÿ>gp1e"TigerLexFun"ad"TigerP"jh3aä¢ParserData"gp2ÿ=ÿ‚.aÿ4gp1ÿ4aÿgp1ÿgp1e"Join"h0

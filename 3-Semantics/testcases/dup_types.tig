@@ -1,0 +1,9 @@
+/*| DUPLICATE |*/
+/* Duplicate in types */
+let
+    type a = {x:b}
+    type b = {y:a}
+    type b = int
+in
+
+end

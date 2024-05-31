@@ -1,0 +1,13 @@
+let
+    var x := 2 var z := 5
+    function f() : int =
+        let
+            var y := 5
+            function g() : int =
+                x + y
+        in
+        g()
+        end
+in
+ z
+end

@@ -1,0 +1,15 @@
+function digitStringToInt (InFrame 0) InReg
+function hexToDec (InFrame 0) InReg
+function intToString (InFrame 0) InReg
+function pow (InFrame 0) InReg InReg
+var ASCII_VAL_OF_0 (InFrame ~4)
+var ASCII_VAL_OF_A (InFrame ~8)
+var digit InReg
+var digit InReg
+var i InReg
+var numDigs InReg
+var ordindal InReg
+var remain InReg
+var result InReg
+var result InReg
+var stripped InReg

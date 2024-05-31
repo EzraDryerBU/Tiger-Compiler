@@ -1,0 +1,5 @@
+var i InReg
+var number InReg
+var threehalfs InReg
+var x2 InReg
+var y InReg

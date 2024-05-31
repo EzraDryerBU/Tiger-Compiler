@@ -1,0 +1,8 @@
+/*| TYPE |*/
+/*error: std print function takes a string so a TYPE error will occur when an int is provided*/
+let
+	function square (val: int) : int = val * val;
+	var two := 2
+in
+	print(square(square(two)))
+end

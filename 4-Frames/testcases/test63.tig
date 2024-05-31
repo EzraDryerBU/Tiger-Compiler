@@ -1,0 +1,6 @@
+let
+    var r := 9
+    function g () = (let var x := 100 in while x > 0 do x := x - r end)
+in
+g()
+end

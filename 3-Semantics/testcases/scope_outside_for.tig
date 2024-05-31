@@ -1,0 +1,31 @@
+/*|SCOPE|*/
+/*Error: Attempt to access j outside of it's corresponding for loop*/
+let
+	type alpha = array of string
+	
+	var arr1:alpha := alpha [8] of "alphabet" 
+	var temp := "s"
+	var temp2 := "j"
+in
+ arr1[1] := "joe";
+ arr1[2] := "mother";
+ arr1[3] := "toaster";
+ arr1[4] := "sandwhich";
+ arr1[5] := "sleep";
+ arr1[6] := "canadian";
+ arr1[7] := "dictionary";
+
+ (for i := 0 to 8
+ 	do
+	    (for j := 1 to 8
+	    	do 
+		if arr1[i] < arr1[j]
+			then temp := arr1[i]
+			else temp := arr1[j]
+		);
+		temp2 := arr1[j];
+		arr1[i] := temp;
+		arr1[j] := temp2
+	    )
+
+end

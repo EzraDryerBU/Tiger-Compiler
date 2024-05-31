@@ -1,0 +1,33 @@
+LetExp([
+ VarDec(x,true,NONE,
+  IntExp(10))],
+ SeqExp[
+  RecordExp(x,[
+
+   (q,
+    RecordExp(a,[
+
+     (y,
+      RecordExp(b,[
+
+       (z,
+        RecordExp(c,[
+
+         (q,
+          IntExp(0))]))]))]))]),
+  VarExp(
+   SubscriptVar(
+    FieldVar(
+     FieldVar(
+      FieldVar(
+       FieldVar(
+        FieldVar(
+         FieldVar(
+          SimpleVar(a),
+          b),
+         c),
+        d),
+       e),
+      f),
+     b),
+    IntExp(10)))])

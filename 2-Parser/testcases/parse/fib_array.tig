@@ -1,0 +1,19 @@
+/* Returns array of size SEQ_SIZE all set to the SEQ_SIZEth fibbonacci number 
+   The reason for returning the array is to show that an array declaration can
+   be an expression.
+   Also verifies the break expression is parseable
+*/
+let
+	type intArray = array of int
+	var SEQ_SIZE := 10
+	var fib_seq := intArray [SEQ_SIZE] of 0
+	var MAX_LIMIT := 100000
+in
+	inc_arr[0] := 1;
+	inc_arr[1] := 1;
+	(for i := 2 to SEQ_SIZE-1 do (
+		inc_arr[i] := inc_arr[i-1] + inc_arr[i-2];
+		if inc_arr[i] > MAX_LIMIT then break
+	));
+    intArray [SEQ_SIZE] of inc_arr[SEQ_SIZE-1]
+end

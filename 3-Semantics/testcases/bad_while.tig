@@ -1,0 +1,8 @@
+/*| TYPE |*/
+/* while loop cond is string and not int */
+
+let
+    type a = int
+in
+    while ("asdf") do ()
+end

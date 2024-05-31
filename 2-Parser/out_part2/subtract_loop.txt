@@ -1,0 +1,44 @@
+LetExp([
+ TypeDec[
+  (intArray,
+   ArrayTy(int))],
+ VarDec(nums,true,NONE,
+  ArrayExp(intArray,
+   IntExp(10),
+   IntExp(10))),
+ FunctionDec[
+  (subtract_loop,[],
+NONE,
+   WhileExp(
+    OpExp(GtOp,
+     VarExp(
+      SubscriptVar(
+       SimpleVar(nums),
+       IntExp(0))),
+     IntExp(0)),
+    SeqExp[
+     ForExp(
+i,true,
+      IntExp(0),
+      IntExp(9),
+      AssignExp(
+       SubscriptVar(
+        SimpleVar(nums),
+        VarExp(
+         SimpleVar(i))),
+       OpExp(MinusOp,
+        VarExp(
+         SubscriptVar(
+          SimpleVar(nums),
+          VarExp(
+           SimpleVar(i)))),
+        VarExp(
+         SimpleVar(i))))),
+     CallExp(print,[
+      VarExp(
+       SubscriptVar(
+        SimpleVar(nums),
+        VarExp(
+         SimpleVar(i))))])]))]],
+ SeqExp[
+  CallExp(subtract_loop,[])])

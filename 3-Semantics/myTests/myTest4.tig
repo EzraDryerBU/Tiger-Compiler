@@ -1,0 +1,11 @@
+/*|TYPE|*/
+/*This should not work due to return value of function*/
+let
+    type x = y
+    type z = x
+    type y = string
+
+    function foo(a:z):int = a
+in
+    foo("hello")
+end

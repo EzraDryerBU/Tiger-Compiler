@@ -1,0 +1,13 @@
+/* Legal use of nil */
+let
+    type rectype = {}
+    var a : rectype := nil
+    var b : rectype := nil
+    var c : rectype := nil
+in
+    if c = nil then 
+        if nil = b then
+            a := nil
+        else
+            b := nil
+end

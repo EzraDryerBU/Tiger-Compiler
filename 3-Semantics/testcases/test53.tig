@@ -1,0 +1,6 @@
+/* This is legal- neither the type a or the value a shadows the other. */
+let type a = int
+    var a : a := 5
+    var b : a := a
+in b + a
+end

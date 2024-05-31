@@ -1,0 +1,15 @@
+let
+
+	type intArray = array of int
+	var nums := intArray [10] of 10
+
+	function subtract_loop() = 
+		while nums[0] > 0
+			do (for i := 0 to 9
+				do nums[i] := nums[i] - i;
+				print(nums[i])
+				)
+
+in subtract_loop()
+
+end

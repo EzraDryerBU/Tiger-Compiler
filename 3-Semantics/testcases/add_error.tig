@@ -1,0 +1,12 @@
+/*| TYPE |*/
+/* this makes sure assignment returns unit, 
+even if it is an add expression dealing with ints */
+
+let
+	var a : int := 6
+	var b : int := 7
+	var c : int := 8
+	
+in
+	(a := b) + c
+end

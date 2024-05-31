@@ -1,0 +1,6 @@
+function f (InFrame 0)
+function f (InFrame 0) InReg
+function printint (InFrame 0) InReg
+var a (InFrame ~4)
+var i (InFrame ~8)
+var j InReg

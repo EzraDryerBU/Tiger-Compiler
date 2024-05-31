@@ -1,0 +1,79 @@
+LetExp([
+ FunctionDec[
+  (fib,[
+   (n,true,int)],
+SOME(int),
+   IfExp(
+    OpExp(LeOp,
+     VarExp(
+      SimpleVar(n)),
+     IntExp(1)),
+    VarExp(
+     SimpleVar(n)),
+    OpExp(PlusOp,
+     CallExp(fib,[
+      OpExp(MinusOp,
+       VarExp(
+        SimpleVar(n)),
+       IntExp(1))]),
+     CallExp(fib,[
+      OpExp(MinusOp,
+       VarExp(
+        SimpleVar(n)),
+       IntExp(2))])))),
+  (printFibonacciSequence,[
+   (n,true,int)],
+NONE,
+   LetExp([
+    FunctionDec[
+     (printFibonacci,[
+      (n,true,int),
+      (current,true,int),
+      (prev,true,int)],
+NONE,
+      IfExp(
+       OpExp(GtOp,
+        VarExp(
+         SimpleVar(current)),
+        VarExp(
+         SimpleVar(n))),
+       SeqExp[],
+       LetExp([
+        VarDec(fibValue,true,NONE,
+         CallExp(fib,[
+          VarExp(
+           SimpleVar(current))]))],
+        SeqExp[
+         CallExp(print,[
+          StringExp("Fib("),
+          VarExp(
+           SimpleVar(current)),
+          StringExp("): "),
+          VarExp(
+           SimpleVar(fibValue)),
+          StringExp("
+")]),
+         CallExp(printFibonacci,[
+          VarExp(
+           SimpleVar(n)),
+          OpExp(PlusOp,
+           VarExp(
+            SimpleVar(current)),
+           IntExp(1)),
+          VarExp(
+           SimpleVar(fibValue))])])))]],
+    SeqExp[
+     CallExp(print,[
+      StringExp("Fibonacci Sequence up to "),
+      VarExp(
+       SimpleVar(n)),
+      StringExp(":
+")]),
+     CallExp(printFibonacci,[
+      VarExp(
+       SimpleVar(n)),
+      IntExp(0),
+      IntExp(0)])]))]],
+ SeqExp[
+  CallExp(printFibonacciSequence,[
+   IntExp(10)])])

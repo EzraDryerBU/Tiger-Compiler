@@ -1,0 +1,4 @@
+function f (InFrame 0) InReg InReg InReg
+var x InReg
+var y InReg
+var z InReg

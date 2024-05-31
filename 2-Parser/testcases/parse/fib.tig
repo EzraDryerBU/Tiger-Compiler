@@ -1,0 +1,29 @@
+/* this program prints out the fibonacci sequence from 1 to 10
+   it has some function definitions and is more of an interesting program
+   than a specific test case */
+let
+    function fib(n: int) : int =
+        if n <= 1 then
+            n
+        else
+            fib(n - 1) + fib(n - 2)
+    
+    function printFibonacciSequence(n: int) =
+        let
+            function printFibonacci(n: int, current: int, prev: int) =
+                if current > n then
+                    ()
+                else
+                    let
+                        var fibValue := fib(current)
+                    in
+                        print("Fib(", current, "): ", fibValue, "\n");
+                        printFibonacci(n, current + 1, fibValue)
+                    end
+        in
+            print("Fibonacci Sequence up to ", n, ":\n");
+            printFibonacci(n, 0, 0)
+        end
+in
+    printFibonacciSequence(10)
+end

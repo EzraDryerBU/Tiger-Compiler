@@ -1,0 +1,11 @@
+/*This should type check*/
+
+let
+    type x = y
+    type z = x
+    type y = int
+
+    function foo(a:z):int = a
+in
+    foo(3)
+end

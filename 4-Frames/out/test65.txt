@@ -1,0 +1,7 @@
+function f (InFrame 0) (InFrame 4) InReg InReg
+function g (InFrame 0)
+var i InReg
+var loop InReg
+var r InReg
+var t (InFrame ~4)
+var w (InFrame ~8)

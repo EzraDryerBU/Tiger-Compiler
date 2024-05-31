@@ -1,0 +1,35 @@
+LetExp([
+ FunctionDec[
+  (trianglesides,[
+   (a,true,int),
+   (b,true,int),
+   (c,true,int)],
+SOME(string),
+   IfExp(
+    OpExp(EqOp,
+     VarExp(
+      SimpleVar(a)),
+     SeqExp[
+      OpExp(EqOp,
+       VarExp(
+        SimpleVar(b)),
+       VarExp(
+        SimpleVar(c)))]),
+    StringExp("equilateral"),
+    IfExp(
+     OpExp(NeqOp,
+      VarExp(
+       SimpleVar(a)),
+      SeqExp[
+       OpExp(NeqOp,
+        VarExp(
+         SimpleVar(b)),
+        VarExp(
+         SimpleVar(c)))]),
+     StringExp("scalene"),
+     StringExp("isosceles"))))]],
+ SeqExp[
+  CallExp(trianglesides,[
+   IntExp(3),
+   IntExp(4),
+   IntExp(5)])])

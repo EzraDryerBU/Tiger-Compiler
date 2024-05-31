@@ -1,0 +1,4 @@
+function f (InFrame 0) InReg InReg InReg
+var x (InFrame ~4)
+var y (InFrame ~8)
+var z (InFrame ~12)

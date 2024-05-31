@@ -1,0 +1,39 @@
+let
+	type int_array = array of int
+	function partition(arr: int_array, low_index: int, high_index: int) =
+		let
+			var i := low_index - 1
+			var tmp: int := nil
+		in
+			for j := low_index to high_index do
+			    if arr[j] <= arr[high_index] then
+			       (i := i + 1;
+			        tmp := arr[i];
+				arr[i] := arr[j];
+				arr[j] := tmp);
+			i := i + 1;
+			tmp := arr[high_index];
+			arr[high_index] := arr[i];
+			arr[i] := tmp
+		end
+
+	function quicksort_helper(arr: int_array, low_index: int, high_index: int) =
+		 let
+			var pivot_index: int := partition(arr, low_index, high_index)
+		 in
+			quicksort_helper(arr, low_index, pivot_index - 1);
+			quicksort_helper(arr, pivot_index + 1, high_index)
+		 end
+
+	function quicksort(arr: int_array, size: int) = quicksort_helper(arr, 0, size - 1)
+
+	var input_array_size := 5
+	var input_array := int_array [input_array_size] of 0
+in
+	input_array[0] := 4;
+	input_array[1] := 2;
+	input_array[2] := 3;
+	input_array[3] := 0;
+	input_array[4] := 1;
+	quicksort(input_array, input_array_size)
+end

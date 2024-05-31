@@ -1,0 +1,10 @@
+function printboard (InFrame 0)
+function try (InFrame 0) InReg
+var N (InFrame ~4)
+var col (InFrame ~12)
+var diag1 (InFrame ~16)
+var diag2 (InFrame ~20)
+var i InReg
+var j InReg
+var r InReg
+var row (InFrame ~8)

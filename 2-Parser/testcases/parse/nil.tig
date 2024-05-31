@@ -1,0 +1,22 @@
+/* NIL Test */
+/* This program makes little sense, but it
+attempts to use every valid use of NIL */
+let
+    type my_record = {a:int}
+in
+    let
+        var rec : my_record := nil
+    in
+        if rec.a = nil then rec.a := 1;
+        let
+            function f(f_rec: my_record) = 
+                if f_rec.a <> nil & nil <> f_rec.a then 
+                    (f_rec.a := nil; f_rec)
+                else
+                    (f_rec.a := 1; f_rec)
+        in
+            print(f(my_record {a=nil}));
+            print(f(my_record {a=1}))
+        end
+    end
+end

@@ -1,0 +1,8 @@
+/*| TYPE |*/
+/* error : procedure returns value */
+let
+	function g(a:int) = a
+in 
+	g(2)
+end
+

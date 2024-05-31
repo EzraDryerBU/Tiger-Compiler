@@ -1,0 +1,9 @@
+/* PARSEABLE */
+/* tests nested if then expressions */
+let
+    var x := 1
+    var y := 2
+    var z := 3
+in
+    if y > x then if z > y + x then if x < y - z then "all true" else "last if false" else "second if false"
+end

@@ -1,0 +1,3 @@
+function g (InFrame 0)
+var r (InFrame ~4)
+var x InReg

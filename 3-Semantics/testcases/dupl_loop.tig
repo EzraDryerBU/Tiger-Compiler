@@ -1,0 +1,17 @@
+/*| DUPLICATE |*/
+/* creates some useless functions and types to test if duplicate names are detected */
+let
+    function f(a: int) = g(a)
+    function g(b: int) = h(b)
+    function h(c: int) = f(c)
+    function h(d: int) = h(d)
+    
+    type a = b
+    type b = int
+
+    type a = int
+
+    var x:b := 10
+in
+    f(x)
+end

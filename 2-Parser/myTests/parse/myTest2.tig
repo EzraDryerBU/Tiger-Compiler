@@ -1,0 +1,7 @@
+/*basic untyped variable, used to help 
+figure out bug with assign statements */
+let
+	var arr1 := 0
+in
+	arr1
+end

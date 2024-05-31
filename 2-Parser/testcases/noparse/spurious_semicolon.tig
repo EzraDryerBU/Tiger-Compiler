@@ -1,0 +1,18 @@
+/*chaining assignment statements allowed syntactically, but has a ";" 
+at the end of the in portion of a let expression. Figured this would
+be useful as adding a semicolon to the end of an exp in the second
+half of a let statement is needed for all exps except the last,
+and so would be a common bug devs using tiger would come across.
+Also thought it was a weird quirk of the grammar and wanted to
+make sure it wouldn't pass. */
+let
+    var a:int := 0
+    var b:int := 2
+    var c := b := a
+    var d := "hello"
+    var e := "world"
+    var f := e := d
+
+in
+    a+b+c;
+end

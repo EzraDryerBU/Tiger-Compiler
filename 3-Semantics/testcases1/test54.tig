@@ -1,0 +1,12 @@
+/*| TYPE SCOPE |*/
+/* error: At line 5 the variable y is out of scope.
+          At line 8, x is declared as a string, but initialized to an int  */
+let
+    function f() : int :
+        let var x := 1 in y end
+
+    function g() : string:
+        let var x : string := 1 in x end
+in
+	g()
+end

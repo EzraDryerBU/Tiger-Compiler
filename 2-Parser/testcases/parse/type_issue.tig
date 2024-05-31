@@ -1,0 +1,7 @@
+/*will compile, but the future type checker should be upset*/
+let
+	var s : string := "hello world"
+	var ns : int := 1
+in
+	ns := s
+end

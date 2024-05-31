@@ -1,0 +1,18 @@
+let
+    var t := 6
+    var w := 11
+    function f(x : int, y : int, z : int) : int =
+        let
+            function g() : int =
+                let
+                    var loop := while t < 9 do (print("t less than 9\n"); t := t + 1)
+                in
+                z
+                end
+            var r := x + y + g()
+        in
+        r
+        end
+in
+if f(w, w, w) > 6 then print("w greater than 6")
+end

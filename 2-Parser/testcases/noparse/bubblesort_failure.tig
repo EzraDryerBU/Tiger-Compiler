@@ -1,0 +1,22 @@
+/*I tried to write bubble sort in tiger and then gave up T_T */
+function bubble_sort(arr: array of int) : array of int =
+	 let
+		var n : int := sizeof(arr)
+		var i : int
+		var j : int
+		swapped : int := 0
+	 in 
+	 	 for i := 0 to (n - 1)
+		     do (
+		     	swapped := 0;
+			for j := 0 to (n - i - 1)
+			    do (
+			     if arr[j] > arr[(j + 1)] then
+			     	(      swap(arr[j], arr[(j+1)]);
+					swapped = 1
+				)
+			    );
+			if swapped = 0 then
+			   break
+		     );
+	end

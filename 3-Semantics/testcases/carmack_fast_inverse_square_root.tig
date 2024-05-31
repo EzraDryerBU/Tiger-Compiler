@@ -1,0 +1,19 @@
+/*A fake tiger implementation of the famous algorithm from Quake III. Real implementation can be found here: https://en.wikipedia.org/wiki/Fast_inverse_square_root#Overview_of_the_code*/
+let
+	type long = int
+	type float = int
+	var number : float := 10
+	var y : float := number
+	var i : long := y
+	var x2 : float := number * (1/2);
+	var threehalfs : float := (3 / 2)
+	
+in
+	
+	y := number;
+	i := y;
+	/*I wanted to use 0x5f3759df but the decimal representation overflows the interpreter, so I divided it by 1000*/
+	i := 1597463 - (i / 2);
+	y := y * ( threehalfs - (x2 * y * y) );
+	y
+end

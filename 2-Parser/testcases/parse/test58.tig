@@ -1,0 +1,7 @@
+let
+	var a: int := 10
+	var b := a - 1
+	var z: string := "xyz"
+in
+	a + b
+end

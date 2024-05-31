@@ -1,0 +1,9 @@
+/*| SCOPE |*/
+/* error: dog/person mutually recursive but in different blocks */
+let
+    type person = {name:string, pet:dog}
+    var a : int := 4
+    type dog = {name:string, owner:person}
+in
+    5
+end
